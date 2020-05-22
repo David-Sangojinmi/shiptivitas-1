@@ -19,12 +19,6 @@ export default class Swimlane extends React.Component {
               invalid: function (el, handle) {
                 return false; // don't prevent any drags from initiating by default
               },
-              // direction: 'horizontal',             // Y axis is considered when determining where an element would be dropped
-              // copy: false                       // elements are moved by default, not copied
-              // copySortSource: false,             // elements in copy-source containers can be reordered
-              // revertOnSpill: true              // spilling will put the element back where it was dragged from, if this is true
-              // removeOnSpill: true
-              // mirrorContainer: document.body,    // set the element that gets mirror elements appended
             }
             Dragula([componentBackingInstance], options);
         }
