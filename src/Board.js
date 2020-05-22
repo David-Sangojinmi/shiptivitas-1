@@ -23,8 +23,8 @@ export default class Board extends React.Component {
   }
   getClients() {
     return [
-        ["1", "Stark, White and Abbott", "Cloned Optimal Architecture", "backlog"],
-        ["2", "Wiza LLC", "Exclusive Bandwidth-Monitored Implementation", "backlog"],
+        ["1", "Stark, White and Abbott", "Cloned Optimal Architecture"],
+        ["2", "Wiza LLC", "Exclusive Bandwidth-Monitored Implementation"],
         ["3", "Nolan LLC", "Vision-Oriented 4Thgeneration Graphicaluserinterface", "backlog"],
         ["4", "Thompson PLC", "Streamlined Regional Knowledgeuser", "backlog"],
         ["5", "Walker-Williamson", "Team-Oriented 6Thgeneration Matrix", "backlog"],
@@ -56,21 +56,21 @@ export default class Board extends React.Component {
 
   render() {
     return (
-      <div className="Board">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-4">
-              {this.renderSwimlane('Backlog', this.state.clients.backlog, this.swimlanes.backlog)}
+        <div className="Board">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-4">
+                      {this.renderSwimlane("Backlog", this.state.clients.backlog, this.swimlanes.backlog)}
+                    </div>
+                    <div className="col-md-4">
+                      {this.renderSwimlane("In Progress", this.state.clients.inProgress, this.swimlanes.inProgress)}
+                    </div>
+                    <div className="col-md-4">
+                      {this.renderSwimlane("Complete", this.state.clients.complete, this.swimlanes.complete)}
+                    </div>
+                </div>
             </div>
-            <div className="col-md-4">
-              {this.renderSwimlane('In Progress', this.state.clients.inProgress, this.swimlanes.inProgress)}
-            </div>
-            <div className="col-md-4">
-              {this.renderSwimlane('Complete', this.state.clients.complete, this.swimlanes.complete)}
-            </div>
-          </div>
         </div>
-      </div>
     );
   }
 }
