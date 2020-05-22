@@ -4,7 +4,7 @@
   font-size: 18px;
 }
 
-.Swimlane-dragColumn {
+#Swimlane-dragColumn {
   height: calc(100vh - 100px);
   overflow-y: auto;
   background-color: #f5f5f5;
